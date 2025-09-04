@@ -1,0 +1,766 @@
+
+Format: Log Type - Time(microsec) - Message - Optional Info
+Log Type: B - Since Boot(Power On Reset),  D - Delta,  S - Statistic
+S - QC_IMAGE_VERSION_STRING=BOOT.XF.0.3-00098-IPQ60xxLZB-1
+S - IMAGE_VARIANT_STRING=IPQ6018LA
+S - OEM_IMAGE_VERSION_STRING=crm-ubuntu121
+S - Boot Interface: NAND
+S - Secure Boot: Off
+S - Boot Config @ 0x000a602c = 0x000002e5
+S - JTAG ID @ 0x000a607c = 0x0013a0e1
+S - OEM ID @ 0x000a6080 = 0x00000000
+S - Serial Number @ 0x000a4128 = 0xaab8c67e
+S - OEM Config Row 0 @ 0x000a4188 = 0x0000000000000000
+S - OEM Config Row 1 @ 0x000a4190 = 0x0000000000000000
+S - Feature Config Row 0 @ 0x000a4130 = 0x0000000008000001
+S - Feature Config Row 1 @ 0x000a4138 = 0x02c3e83383000009
+S - PBL Patch Ver: 1
+S - I-cache: On
+S - D-cache: On
+B -      3413 - PBL, Start
+B -       592 - bootable_media_detect_entry, Start
+B -      4339 - bootable_media_detect_success, Start
+B -      5509 - elf_loader_entry, Start
+B -      5681 - auth_hash_seg_entry, Start
+B -      8147 - auth_hash_seg_exit, Start
+B -      8642 - elf_segs_hash_verify_entry, Start
+B -    103997 - elf_segs_hash_verify_exit, Start
+B -    108188 - auth_xbl_sec_hash_seg_entry, Start
+B -    108333 - auth_xbl_sec_hash_seg_exit, Start
+B -    114887 - xbl_sec_segs_hash_verify_entry, Start
+B -    114888 - xbl_sec_segs_hash_verify_exit, Start
+B -    115818 - PBL, End
+B -     97661 - SBL1, Start
+B -    237564 - GCC [RstStat:0x0, RstDbg:0x600000] WDog Stat : 0x4
+B -    240004 - clock_init, Start
+D -      3782 - clock_init, Delta
+B -    249642 - boot_flash_init, Start
+D -     29402 - boot_flash_init, Delta
+B -    281301 - sbl1_ddr_set_default_params, Start
+D -       274 - sbl1_ddr_set_default_params, Delta
+B -    287920 - boot_config_data_table_init, Start
+D -      4758 - boot_config_data_table_init, Delta - (575 Bytes)
+B -    297832 - CDT Version:2,Platform ID:8,Major ID:3,Minor ID:0,Subtype:0
+B -    302590 - Image Load, Start
+D -      6619 - OEM_MISC Image Loaded, Delta - (0 Bytes)
+B -    311923 - Image Load, Start
+D -      5063 - PMIC Image Loaded, Delta - (0 Bytes)
+B -    319792 - sbl1_ddr_set_params, Start
+B -    324794 - CPR configuration: 0x366
+B -    327997 - Pre_DDR_clock_init, Start
+D -       183 - Pre_DDR_clock_init, Delta
+D -         0 - sbl1_ddr_set_params, Delta
+B -    363072 - Image Load, Start
+D -       518 - APDP Image Loaded, Delta - (0 Bytes)
+B -    381951 - Image Load, Start
+D -       519 - QTI_MISC Image Loaded, Delta - (0 Bytes)
+B -    384483 - Image Load, Start
+D -       915 - Auth Metadata
+D -       640 - Segments hash check
+D -     22753 - QSEE Dev Config Image Loaded, Delta - (36490 Bytes)
+B -    409188 - Image Load, Start
+D -      6588 - Auth Metadata
+D -     10309 - Segments hash check
+D -    335103 - QSEE Image Loaded, Delta - (1436620 Bytes)
+B -    744810 - Image Load, Start
+D -       701 - Auth Metadata
+D -       976 - Segments hash check
+D -     34709 - RPM Image Loaded, Delta - (102800 Bytes)
+B -    781166 - Image Load, Start
+D -       610 - Auth Metadata
+D -      3203 - Segments hash check
+D -    124928 - APPSBL Image Loaded, Delta - (564746 Bytes)
+B -    923601 - SBL1, End
+D -    826306 - SBL1, Delta
+S - Flash Throughput, 4000 KB/s  (2141903 Bytes,  437481 us)
+S - Core 0 Frequency, 800 MHz
+S - DDR Frequency, 466 MHz
+
+
+U-Boot 2016.01 (Feb 22 2022 - 07:34:04 +0000)
+
+DRAM:  smem ram ptable found: ver: 2 len: 4
+1 GiB
+[CINF]: *** Welcome to Calix EXOS U-Boot!
+[CINF]: ***  [Version 3.1.3]
+[CINF]: ***
+[CINF]: psyslog: base:0x7fe00000, size:0x100000, last buf size:0x8028c427, last magic code:0x649c4618
+NAND:  ONFI device found
+ID = 1590ac2c
+Vendor = 2c
+Device = ac
+SF: Unsupported flash IDs: manuf 00, jedec 0000, ext_jedec 0000
+ipq_spi: SPI Flash not found (bus/cs/speed/mode) = (0/0/48000000/0)
+512 MiB
+MMC:   sdhci: Node Not found, skipping initialization
+
+In:    serial@78B1000
+Out:   serial@78B1000
+Err:   serial@78B1000
+machid: 8030000
+eth7 MAC Address from ART is not valid
+[CINF]: Flash type: NAND only
+[CINF]: BootInfo: PriBt=0xf0000000 Actv:1 Cmtd:1 Val0:1 Val1:1 QPDS:0
+[CINF]: CLX_BOOT_INFO_MAGIC:0xbb7fa8d7
+[CINF]: CLX_BOOT_INFO_CRCNT:0xf5f954ec
+[CINF]: CLX_BOOT_INFO_PSCNT:0xf75f5777
+[CINF]: CLX_BOOT_INFO_BTRSN:0x716edb31
+[CINF]: Setup boot side for 'rootfs'|'rootfs_1'
+[CINF]: boot: 1, rootfs(start=828) to rootfs_1(start=140)
+[CINF]: Setup boot side for '0:WIFIFW'|'0:WIFIFW_1'
+[CINF]: Setup boot side for '0:PONSFPFW'|'0:PONSFPFW_1'
+[CINF]: Setup boot side for '0:DEVCFG'|'0:DEVCFG_1'
+[CINF]: boot: 1, 0:DEVCFG(start=84) to 0:DEVCFG_1(start=88)
+[CINF]: copy data from 0:DEVCFG(start=84) to 0:DEVCFG_1(start=88)
+[CINF]: duplicate: 0:DEVCFG to 0:DEVCFG_1 MTD.
+[CINF]: duplicate: 0:DEVCFG to 0:DEVCFG_1 MTD.
+[CINF]: 0:DEVCFG start from: 0x54 size: 0x4.
+[CINF]: 0:DEVCFG_1 start from: 0x58 size: 0x4.
+[CINF]: Run: nand read 0x44000000 0xa80000 0x80000 to read image to 0x1140850688.
+
+NAND read: device 0 offset 0xa80000, size 0x80000
+ 524288 bytes read: OK
+[CINF]: Run: nand erase 0xb00000  0x80000 to erase 0:DEVCFG_1 MTD.
+
+NAND erase: device 0 offset 0xb00000, size 0x80000
+Erasing at 0xb00000 --  25% complete.Erasing at 0xb20000 --  50% complete.Erasing at 0xb40000 --  75% complete.Erasing at 0xb60000 -- 100% complete.
+OK
+[CINF]: Run: nand write 0x44000000 0xb00000 0x80000 to write image to 0:DEVCFG_1 MTD.
+
+NAND write: device 0 offset 0xb00000, size 0x80000
+ 524288 bytes written: OK
+[CINF]: [Calix]: before Swap [6 <-> 7]: [0:DEVCFG: 0x54] [0:DEVCFG_1: 0x58]
+[CINF]: [Calix]: after Swap [6 <-> 7]: [0:DEVCFG: 0x58] [0:DEVCFG_1: 0x54]
+[CINF]: Setup boot side for '0:APDP'|'0:APDP_1'
+[CINF]: Setup boot side for '0:RPM'|'0:RPM_1'
+[CINF]: boot: 1, 0:RPM(start=92) to 0:RPM_1(start=96)
+[CINF]: copy data from 0:RPM(start=92) to 0:RPM_1(start=96)
+[CINF]: duplicate: 0:RPM to 0:RPM_1 MTD.
+[CINF]: duplicate: 0:RPM to 0:RPM_1 MTD.
+[CINF]: 0:RPM start from: 0x5c size: 0x4.
+[CINF]: 0:RPM_1 start from: 0x60 size: 0x4.
+[CINF]: Run: nand read 0x44000000 0xb80000 0x80000 to read image to 0x1140850688.
+
+NAND read: device 0 offset 0xb80000, size 0x80000
+ 524288 bytes read: OK
+[CINF]: Run: nand erase 0xc00000  0x80000 to erase 0:RPM_1 MTD.
+
+NAND erase: device 0 offset 0xc00000, size 0x80000
+Erasing at 0xc00000 --  25% complete.Erasing at 0xc20000 --  50% complete.Erasing at 0xc40000 --  75% complete.Erasing at 0xc60000 -- 100% complete.
+OK
+[CINF]: Run: nand write 0x44000000 0xc00000 0x80000 to write image to 0:RPM_1 MTD.
+
+NAND write: device 0 offset 0xc00000, size 0x80000
+ 524288 bytes written: OK
+[CINF]: [Calix]: before Swap [8 <-> 9]: [0:RPM: 0x5c] [0:RPM_1: 0x60]
+[CINF]: [Calix]: after Swap [8 <-> 9]: [0:RPM: 0x60] [0:RPM_1: 0x5c]
+[CINF]: Setup boot side for '0:CDT'|'0:CDT_1'
+[CINF]: boot: 1, 0:CDT(start=100) to 0:CDT_1(start=104)
+[CINF]: copy data from 0:CDT(start=100) to 0:CDT_1(start=104)
+[CINF]: duplicate: 0:CDT to 0:CDT_1 MTD.
+[CINF]: duplicate: 0:CDT to 0:CDT_1 MTD.
+[CINF]: 0:CDT start from: 0x64 size: 0x4.
+[CINF]: 0:CDT_1 start from: 0x68 size: 0x4.
+[CINF]: Run: nand read 0x44000000 0xc80000 0x80000 to read image to 0x1140850688.
+
+NAND read: device 0 offset 0xc80000, size 0x80000
+ 524288 bytes read: OK
+[CINF]: Run: nand erase 0xd00000  0x80000 to erase 0:CDT_1 MTD.
+
+NAND erase: device 0 offset 0xd00000, size 0x80000
+Erasing at 0xd00000 --  25% complete.Erasing at 0xd20000 --  50% complete.Erasing at 0xd40000 --  75% complete.Erasing at 0xd60000 -- 100% complete.
+OK
+[CINF]: Run: nand write 0x44000000 0xd00000 0x80000 to write image to 0:CDT_1 MTD.
+
+NAND write: device 0 offset 0xd00000, size 0x80000
+ 524288 bytes written: OK
+[CINF]: [Calix]: before Swap [10 <-> 11]: [0:CDT: 0x64] [0:CDT_1: 0x68]
+[CINF]: [Calix]: after Swap [10 <-> 11]: [0:CDT: 0x68] [0:CDT_1: 0x64]
+[CINF]: Setup boot side for '0:QSEE'|'0:QSEE_1'
+[CINF]: boot: 1, 0:QSEE(start=28) to 0:QSEE_1(start=56)
+[CINF]: copy data from 0:QSEE(start=28) to 0:QSEE_1(start=56)
+[CINF]: duplicate: 0:QSEE to 0:QSEE_1 MTD.
+[CINF]: duplicate: 0:QSEE to 0:QSEE_1 MTD.
+[CINF]: 0:QSEE start from: 0x1c size: 0x1c.
+[CINF]: 0:QSEE_1 start from: 0x38 size: 0x1c.
+[CINF]: Run: nand read 0x44000000 0x380000 0x380000 to read image to 0x1140850688.
+
+NAND read: device 0 offset 0x380000, size 0x380000
+ 3670016 bytes read: OK
+[CINF]: Run: nand erase 0x700000  0x380000 to erase 0:QSEE_1 MTD.
+
+NAND erase: device 0 offset 0x700000, size 0x380000
+Erasing at 0x700000 --   3% complete.Erasing at 0x720000 --   7% complete.Erasing at 0x740000 --  10% complete.Erasing at 0x760000 --  14% complete.Erasing at 0x780000 --  17% complete.Erasing at 0x7a0000 --  21% complete.Erasing at 0x7c0000 --  25% complete.Erasing at 0x7e0000 --  28% complete.Erasing at 0x800000 --  32% complete.Erasing at 0x820000 --  35% complete.Erasing at 0x840000 --  39% complete.Erasing at 0x860000 --  42% complete.Erasing at 0x880000 --  46% complete.Erasing at 0x8a0000 --  50% complete.Erasing at 0x8c0000 --  53% complete.Erasing at 0x8e0000 --  57% complete.Erasing at 0x900000 --  60% complete.Erasing at 0x920000 --  64% complete.Erasing at 0x940000 --  67% complete.Erasing at 0x960000 --  71% complete.Erasing at 0x980000 --  75% complete.Erasing at 0x9a0000 --  78% complete.Erasing at 0x9c0000 --  82% complete.Erasing at 0x9e0000 --  85% complete.Erasing at 0xa00000 --  89% complete.Erasing at 0xa20000 --  92% complete.Erasing at 0xa40000 --  96% complete.Erasing at 0xa60000 -- 100% complete.
+OK
+[CINF]: Run: nand write 0x44000000 0x700000 0x380000 to write image to 0:QSEE_1 MTD.
+
+NAND write: device 0 offset 0x700000, size 0x380000
+ 3670016 bytes written: OK
+[CINF]: [Calix]: before Swap [4 <-> 5]: [0:QSEE: 0x1c] [0:QSEE_1: 0x38]
+[CINF]: [Calix]: after Swap [4 <-> 5]: [0:QSEE: 0x38] [0:QSEE_1: 0x1c]
+Type <stop> to stop autoboot in  2s
+[CINF]: Setup boot side for 'rootfs'|'rootfs_1'
+[CINF]: boot: 1, rootfs(start=828) to rootfs_1(start=140)
+ubi0: attaching mtd1
+ubi0: scanning is finished
+ubi0: attached mtd1 (name "mtd=0", size 86 MiB)
+ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+ubi0: good PEBs: 688, bad PEBs: 0, corrupted PEBs: 0
+ubi0: user volume: 4, internal volumes: 1, max. volumes count: 128
+ubi0: max/mean erase counter: 10/2, WL threshold: 4096, image sequence number: 1626161798
+ubi0: available PEBs: 0, total reserved PEBs: 688, PEBs reserved for bad PEB handling: 80
+Read 0 bytes from volume kernel to 44000000
+No size specified -> Using max size (4672804)
+[CERR]: do_boot_calix       :0434:0 Run: [ubi part fs && ubi read 0x44000000 kernel] successful
+module id = 36 
+hw release = 21 
+select config@36 by calix module id 
+## Loading kernel from FIT Image at 44000000 ...
+   Using 'config@36' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  ARM OpenWrt Linux-4.4.60
+     Type:         Kernel Image
+     Compression:  gzip compressed
+     Data Start:   0x440000e4
+     Data Size:    4222726 Bytes = 4 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x41008000
+     Entry Point:  0x41008000
+     Hash algo:    crc32
+     Hash value:   131d2841
+     Hash algo:    sha1
+     Hash value:   12f98a7859fa5617955bd2ad38385067a4e6504e
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+## Loading fdt from FIT Image at 44000000 ...
+   Using 'config@36' configuration
+   Trying 'fdt@36' fdt subimage
+     Description:  ARM OpenWrt qcom-ipq60xx-cpxx device tree blob
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0x44461a64
+     Data Size:    76042 Bytes = 74.3 KiB
+     Architecture: ARM
+     Hash algo:    crc32
+     Hash value:   d1aacbdf
+     Hash algo:    sha1
+     Hash value:   2539fb51496a47bea9f139b7054350ffac6cdf90
+   Verifying Hash Integrity ... crc32+ sha1+ OK
+   Booting using the fdt blob at 0x44461a64
+   Uncompressing Kernel Image ... OK
+   Loading Device Tree to 484ea000, end 484ff909 ... OK
+[CINF]: yves ft_board_setup entry
+Using machid 0x8030000 from environment
+
+Starting kernel ...
+
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Initializing cgroup subsys cpuacct
+[    0.000000] Linux version 4.4.60 (ode-user@ctr-sfWFEOk58URB) (gcc version 5.2.0 (OpenWrt GCC 5.2.0 unknown) ) #3 SMP PREEMPT Tue Feb 22 08:30:08 UTC 2022
+[    0.000000] CPU: ARMv7 Processor [51af8014] revision 4 (ARMv7), cr=10c0383d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] Machine model: CALIX,GS2028E
+[    0.000000] Ignoring memory range 0x40000000 - 0x41000000
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] PERCPU: Embedded 11 pages/cpu @be4b6000 s14720 r8192 d22144 u45056
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 228900
+[    0.000000] Kernel command line: console=ttyMSM0,115200n8 ubi.mtd=rootfs root=mtd:ubi_rootfs rootfstype=squashfs rootwait swiotlb=1 coherent_pool=2M
+[    0.000000] PID hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 904108K/924672K available (6313K kernel code, 395K rwdata, 2048K rodata, 1024K init, 434K bss, 20564K reserved, 0K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xbf800000 - 0xff800000   (1024 MB)
+[    0.000000]     lowmem  : 0x80000000 - 0xbf000000   (1008 MB)
+[    0.000000]     pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+[    0.000000]     modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+[    0.000000]       .text : 0x80008000 - 0x8092a4b0   (9354 kB)
+[    0.000000]       .init : 0x80a00000 - 0x80b00000   (1024 kB)
+[    0.000000]       .data : 0x80b00000 - 0x80b62d84   ( 396 kB)
+[    0.000000]        .bss : 0x80b65000 - 0x80bd1a70   ( 435 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] psyslog: base:0x7fe00000, size:0x100000, last buf size:0x100000, last magic code:0x41484f55
+[    0.000000] Preemptible hierarchical RCU implementation.
+[    0.000000] 	Build-time adjustment of leaf fanout to 32.
+[    0.000000] NR_IRQS:16 nr_irqs:16 16
+[    0.000000] Architected cp15 timer(s) running at 24.00MHz (virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    0.000005] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    0.000019] Switching to timer-based delay loop, resolution 41ns
+[    0.000453] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=240000)
+[    0.000468] pid_max: default: 32768 minimum: 301
+[    0.000563] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000575] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.001090] Initializing cgroup subsys io
+[    0.001108] Initializing cgroup subsys memory
+[    0.001135] Initializing cgroup subsys devices
+[    0.001152] Initializing cgroup subsys freezer
+[    0.001166] Initializing cgroup subsys net_cls
+[    0.001179] Initializing cgroup subsys net_prio
+[    0.001191] Initializing cgroup subsys pids
+[    0.001216] CPU: Testing write buffer coherency: ok
+[    0.001595] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.001641] Setting up static identity map for 0x41100000 - 0x41100058
+[    0.052808] MSM Memory Dump base table set up
+[    0.052836] MSM Memory Dump apps data table set up
+[    0.090198] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.120183] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.150217] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.150274] Brought up 4 CPUs
+[    0.150296] SMP: Total of 4 processors activated (192.00 BogoMIPS).
+[    0.150305] CPU: All CPU(s) started in SVC mode.
+[    0.170606] VFP support v0.3: implementor 51 architecture 3 part 40 variant 3 rev 4
+[    0.170915] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.170942] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.171156] pinctrl core: initialized pinctrl subsystem
+[    0.172216] NET: Registered protocol family 16
+[    0.173309] DMA: preallocated 2048 KiB pool for atomic coherent allocations
+[    0.200053] cpuidle: using governor ladder
+[    0.230072] cpuidle: using governor menu
+[    0.230319] NET: Registered protocol family 42
+[    0.231965] console [pstore-1] enabled
+[    0.232084] pstore: Registered ramoops as persistent store backend
+[    0.232098] ramoops: attached 0x100000@0x7ff00000, ecc: 0/0
+[    0.246252] irq: no irq domain found for /soc/smp2p-wcss/slave-kernel !
+[    0.249398] irq: no irq domain found for /soc/smp2p-wcss/slave-kernel !
+[    0.260494] CPU: IPQ6010, SoC Version: 1.0
+[    0.261317] qcom,cpr4-apss-regulator b018000.cpr4-ctrl: CPR valid fuse count: 4
+[    0.262567] IPC logging disabled
+[    0.262579] IPC logging disabled
+[    0.262588] IPC logging disabled
+[    0.262597] IPC logging disabled
+[    0.262606] IPC logging disabled
+[    0.262821] sps:sps is ready.
+[    0.291031] socinfo_select_format: Unsupported format v0.13. Falling back to v0.12.
+[    0.291060] socinfo_print: v0.12, id=422, ver=1.0, raw_id=314, raw_ver=0, hw_plat=8, hw_plat_ver=196608
+[    0.291060]  accessory_chip=0, hw_plat_subtype=0, pmic_model=0, pmic_die_revision=0 foundry_id=2 serial_number=2864236158 num_pmics=0 chip_family=0x66 raw_device_family=0x2 raw_device_number=0x17
+[    0.292008] usbcore: registered new interface driver usbfs
+[    0.292078] usbcore: registered new interface driver hub
+[    0.292152] usbcore: registered new device driver usb
+[    0.292204] pps_core: LinuxPPS API ver. 1 registered
+[    0.292216] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.292246] PTP clock support registered
+[    0.294248] rpmsg_dev_probe: No pm domain
+[    0.295182] Advanced Linux Sound Architecture Driver Initialized.
+[    0.296015] clocksource: Switched to clocksource arch_sys_counter
+[    0.298691] NET: Registered protocol family 2
+[    0.299199] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.299290] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    0.299437] TCP: Hash tables configured (established 8192 bind 8192)
+[    0.299490] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    0.299531] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    0.299702] NET: Registered protocol family 1
+[    0.308236] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.308976] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.312841] Key type asymmetric registered
+[    0.312862] Asymmetric key parser 'x509' registered
+[    0.312906] io scheduler noop registered
+[    0.312925] io scheduler deadline registered (default)
+[    0.320690] msm_rpm_log_probe: OK
+[    0.321029] msm-dcc b3000.dcc: DCC XPU is not specified
+[    0.321289] msm-dcc b3000.dcc: jiffies_64: 0xffff8aef, cntvct_64: 0xca2cb43
+[    0.321306] msm-dcc b3000.dcc: gcnt_hi: 0x00000000(0xbfb3e004)
+[    0.321322] msm-dcc b3000.dcc: gcnt_lo: 0x0ca2ce77(0xbfb3e000)
+[    0.322105] TZ SMMU State: SMMU Stage2 Enabled
+[    0.322160] TZ Log : Will warn on Access Violation, as paniconaccessviolation is not set
+[    0.322378] rpmsg_dev_probe: No pm domain
+[    0.322958] [CDBG]: magic = 0x434c5877
+[    0.322973] Calix Boot Info:[Cold Boot] CR-Count[1] PR-Count[1] Reason[0x00000002]
+[    0.323808] msm_serial 78b0000.serial: msm_serial: detected port #1
+[    0.323846] msm_serial 78b0000.serial: uartclk = 24000000
+[    0.323882] 78b0000.serial: ttyMSM1 at MMIO 0x78b0000 (irq = 20, base_baud = 1500000) is a MSM
+[    0.324215] msm_serial 78b1000.serial: msm_serial: detected port #0
+[    0.324250] msm_serial 78b1000.serial: uartclk = 1843199
+[    0.324281] 78b1000.serial: ttyMSM0 at MMIO 0x78b1000 (irq = 21, base_baud = 115199) is a MSM
+[    0.324303] msm_serial: console setup on port #0
+[    1.068244] console [ttyMSM0] enabled
+[    1.073301] msm_serial: driver initialized
+[    1.076822] msm_serial_hsl_init: driver initialized
+[    1.089998] brd: module loaded
+[    1.095297] loop: module loaded
+[    1.095927] spi_qup 78b5000.spi: IN:block:16, fifo:64, OUT:block:16, fifo:64
+[    1.099003] m25p80 spi32766.0: unrecognized JEDEC id bytes: 00,  0,  0
+[    1.105260] QPIC controller hw version Major:1, Minor:5
+[    1.111216] nand: device found, Manufacturer ID: 0x2c, Chip ID: 0xac
+[    1.115997] nand: ONFI 10-Compliant Micron MT29F4G08ABBDAH4
+[    1.122593] nand: 512 MiB, SLC, erase size: 128 KiB, page size: 2048, OOB size: 64
+[    1.128003] 23 ofpart partitions found on MTD device qcom_nand.0
+[    1.135527] Creating 23 MTD partitions on "qcom_nand.0":
+[    1.141705] 0x000000000000-0x000000180000 : "0:SBL1"
+[    1.149015] 0x000000180000-0x000000280000 : "0:MIBIB"
+[    1.153430] 0x000000280000-0x000000300000 : "0:BOOTCONFIG"
+[    1.158013] 0x000000300000-0x000000380000 : "0:BOOTCONFIG1"
+[    1.163407] 0x000000380000-0x000000700000 : "0:QSEE_1"
+[    1.171169] 0x000000700000-0x000000a80000 : "0:QSEE"
+[    1.176442] 0x000000a80000-0x000000b00000 : "0:DEVCFG_1"
+[    1.179239] 0x000000b00000-0x000000b80000 : "0:DEVCFG"
+[    1.184548] 0x000000b80000-0x000000c00000 : "0:RPM_1"
+[    1.189521] 0x000000c00000-0x000000c80000 : "0:RPM"
+[    1.194581] 0x000000c80000-0x000000d00000 : "0:CDT_1"
+[    1.199241] 0x000000d00000-0x000000d80000 : "0:CDT"
+[    1.204434] 0x000000d80000-0x000000e00000 : "0:APPSBLENV"
+[    1.209172] 0x000000e00000-0x000000f80000 : "0:APPSBL_1"
+[    1.215487] 0x000000f80000-0x000001100000 : "0:APPSBL"
+[    1.220882] 0x000001100000-0x000001180000 : "0:ART"
+[    1.225081] 0x000001180000-0x000006780000 : "rootfs_1"
+[    1.294273] 0x000006780000-0x00000bd80000 : "rootfs"
+[    1.360117] mtd: device 17 (rootfs) set to be root filesystem
+[    1.360383] mtdsplit: no squashfs found in "rootfs"
+[    1.364846] 0x00000bd80000-0x00000be00000 : "0:ETHPHYFW"
+[    1.370651] 0x00000be00000-0x00000c000000 : "0:CSSS"
+[    1.377324] 0x00000c000000-0x00000d100000 : "noerase"
+[    1.393438] 0x00000d100000-0x00001ff00000 : "exa_data"
+[    1.622005] 0x00001ff00000-0x000020000000 : "nvram"
+[    1.624152] libphy: Fixed MDIO Bus: probed
+[    2.066590] qca-mdio 90000.mdio: Could not find phy-reset-gpio
+[    2.066737] libphy: qca_mdio: probed
+[    2.072551] qca-mdio 90000.mdio: qca-mdio driver was registered
+[    2.075189] Unable to create IPC log context!
+[    2.081262] cnss[2]: INFO: Platform driver probed successfully. plat bd068010 tgt 0xfffd
+[    2.085599] usbcore: registered new interface driver usbserial
+[    2.093433] usbcore: registered new interface driver usbserial_generic
+[    2.099086] usbserial: USB Serial support registered for generic
+[    2.105551] usbcore: registered new interface driver ch341
+[    2.111738] usbserial: USB Serial support registered for ch341-uart
+[    2.117040] usbcore: registered new interface driver pl2303
+[    2.123164] usbserial: USB Serial support registered for pl2303
+[    2.128717] i2c /dev entries driver
+[    2.166529] device-mapper: ioctl: 4.34.0-ioctl (2015-10-28) initialised: dm-devel@redhat.com
+[    2.167166] sdhci: Secure Digital Host Controller Interface driver
+[    2.174031] sdhci: Copyright(c) Pierre Ossman
+[    2.180044] sdhci-pltfm: SDHCI platform and OF driver helper
+[    2.184788] sdhci_msm 7804000.sdhci_sd: sdhci_msm_probe: ICE device is not enabled
+[    2.190260] sdhci_msm 7804000.sdhci_sd: Got SD LDO GPIO #66
+[    2.297595] sdhci_msm 7804000.sdhci_sd: No vreg data found for vdd
+[    2.297629] sdhci_msm 7804000.sdhci_sd: No vreg data found for vdd-io
+[    2.313453] sdhci_msm 7804000.sdhci_sd: No vmmc regulator found
+[    2.313486] sdhci_msm 7804000.sdhci_sd: Add host failed (-517)
+[    2.319195] qcom_ice_get_device_tree_data: No vdd-hba-supply regulator, assuming not needed
+[    2.324124] ICE IRQ = 31
+[    2.332952] 
+[    2.332952] Version Rollback Feature Disabled
+[    2.335657] sps_register_bam_device : unable to create IPC Logging 0 for bam 0x08b04000
+[    2.340794] sps_register_bam_device : unable to create IPC Logging 1 for bam 0x08b04000sps_register_bam_device : unable to create IPC Logging 2 for bam 0x08b04000
+[    2.356664] sps_register_bam_device : unable to create IPC Logging 3 for bam 0x08b04000sps_register_bam_device : unable to create IPC Logging 4 for bam 0x08b04000
+[    2.371160] sps:BAM 0x08b04000 is registered.[    2.380191] qcom-q6v5-wcss-pil cd00000.qcom_q6v5_wcss: ssr registeration success qcom_q6v5_wcss
+[    2.381890] remoteproc remoteproc0: cd00000.qcom_q6v5_wcss is available
+[    2.391622] of_graph_get_next_endpoint(): no port node found in /soc/csr@6001000
+[    2.397189] coresight-csr 6001000.csr: CSR initialized
+[    2.404878] of_graph_get_next_endpoint(): no port node found in /soc/cti@6010000
+[    2.409861] of_graph_get_next_endpoint(): no port node found in /soc/cti@6011000
+[    2.417407] of_graph_get_next_endpoint(): no port node found in /soc/cti@6012000
+[    2.424767] of_graph_get_next_endpoint(): no port node found in /soc/cti@6013000
+[    2.432165] of_graph_get_next_endpoint(): no port node found in /soc/cti@6014000
+[    2.439547] of_graph_get_next_endpoint(): no port node found in /soc/cti@6015000
+[    2.446927] of_graph_get_next_endpoint(): no port node found in /soc/cti@6016000
+[    2.454281] of_graph_get_next_endpoint(): no port node found in /soc/cti@6017000
+[    2.461681] of_graph_get_next_endpoint(): no port node found in /soc/cti@6018000
+[    2.469058] of_graph_get_next_endpoint(): no port node found in /soc/cti@6019000
+[    2.476440] of_graph_get_next_endpoint(): no port node found in /soc/cti@601a000
+[    2.483806] of_graph_get_next_endpoint(): no port node found in /soc/cti@601b000
+[    2.491199] of_graph_get_next_endpoint(): no port node found in /soc/cti@601c000
+[    2.498573] of_graph_get_next_endpoint(): no port node found in /soc/cti@601d000
+[    2.505941] of_graph_get_next_endpoint(): no port node found in /soc/cti@601e000
+[    2.513333] of_graph_get_next_endpoint(): no port node found in /soc/cti@601f000
+[    2.520719] of_graph_get_next_endpoint(): no port node found in /soc/cti@6198000
+[    2.528214] of_graph_get_next_endpoint(): no port node found in /soc/cti@6199000
+[    2.535582] of_graph_get_next_endpoint(): no port node found in /soc/cti@619a000
+[    2.543011] of_graph_get_next_endpoint(): no port node found in /soc/cti@619b000
+[    2.550436] of_graph_get_next_endpoint(): no port node found in /soc/cti@610c000
+[    2.557771] sps_register_bam_device : unable to create IPC Logging 0 for bam 0x06064000
+[    2.564801] sps_register_bam_device : unable to create IPC Logging 1 for bam 0x06064000sps_register_bam_device : unable to create IPC Logging 2 for bam 0x06064000
+[    2.580522] sps_register_bam_device : unable to create IPC Logging 3 for bam 0x06064000sps_register_bam_device : unable to create IPC Logging 4 for bam 0x06064000
+[    2.595005] sps:BAM 0x06064000 is registered.[    2.602030] coresight-tmc 6048000.tmc: TMC initialized
+[    2.606111] coresight-tmc 6047000.tmc: TMC initialized
+[    2.611242] coresight-funnel 6041000.funnel: FUNNEL initialized
+[    2.616266] coresight-funnel 6100000.funnel: FUNNEL initialized
+[    2.622067] coresight-funnel 6130000.funnel: FUNNEL initialized
+[    2.627990] coresight-funnel 6120000.funnel: FUNNEL initialized
+[    2.633887] coresight-funnel 61a1000.funnel: FUNNEL initialized
+[    2.640510] coresight-etm4x 619c000.etm: ETM 4.0 initialized
+[    2.646162] coresight-etm4x 619d000.etm: ETM 4.0 initialized
+[    2.652041] coresight-etm4x 619e000.etm: ETM 4.0 initialized
+[    2.657705] coresight-etm4x 619f000.etm: ETM 4.0 initialized
+[    2.662891] coresight-replicator-qcom 6046000.replicator: REPLICATOR 1.0 initialized
+[    2.668669] coresight-stm 6002000.stm: STM initialized
+[    2.677281] of_graph_get_next_endpoint(): no port node found in /soc/hwevent@6101000
+[    2.681052] coresight-hwevent 6101000.hwevent: Hardware Event driver initialized
+[    2.690339] NET: Registered protocol family 10
+[    2.696989] NET: Registered protocol family 17
+[    2.700504] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    2.704936] Bridge firewalling registered
+[    2.717678] 8021q: 802.1Q VLAN Support v1.8
+[    2.721845] Registering SWP/SWPB emulation handler
+[    2.727290] Key type encrypted registered
+[    2.731715] qcom,cpr4-apss-regulator b018000.cpr4-ctrl: CPR valid fuse count: 4
+[    2.736314] sdhci_msm 7804000.sdhci_sd: sdhci_msm_probe: ICE device is not enabled
+[    2.741680] sdhci_msm 7804000.sdhci_sd: Got SD LDO GPIO #66
+[    2.849316] sdhci_msm 7804000.sdhci_sd: No vreg data found for vdd
+[    2.849350] sdhci_msm 7804000.sdhci_sd: No vreg data found for vdd-io
+[    2.865212] sdhci_msm 7804000.sdhci_sd: No vmmc regulator found
+[    2.866152] random: nonblocking pool is initialized
+[    2.916133] mmc0: SDHCI controller on 7804000.sdhci_sd [7804000.sdhci_sd] using ADMA 64-bit
+[    2.916260] qcom,cpr4-apss-regulator b018000.cpr4-ctrl: CPR valid fuse count: 4
+[    2.923480] cpr4_ipq807x_apss_read_fuse_data: apc_corner: speed bin = 0
+[    2.930599] cpr4_ipq807x_apss_read_fuse_data: apc_corner: CPR fusing revision = 2
+[    2.937192] cpr4_ipq807x_apss_read_fuse_data: apc_corner: CPR misc fuse value = 0
+[    2.944839] cpr4_ipq807x_apss_read_fuse_data: apc_corner: Voltage boost fuse config = 0 boost = disable
+[    2.952367] cpr3_mem_acc_init: apc: not using memory accelerator regulator
+[    2.961498] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused      SVS: open-loop= 675000 uV
+[    2.968446] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused      NOM: open-loop= 787500 uV
+[    2.978427] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused    TURBO: open-loop= 850000 uV
+[    2.988236] cpr4_ipq807x_apss_calculate_open_loop_voltages: apc_corner: fused   STURBO: open-loop= 900000 uV
+[    2.998082] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused      SVS: quot[ 7]= 614, quot_offset[ 7]=   0
+[    3.007857] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused      NOM: quot[ 7]= 807, quot_offset[ 7]= 190
+[    3.018708] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused    TURBO: quot[ 7]= 905, quot_offset[ 7]=  95
+[    3.029647] cpr4_ipq807x_apss_calculate_target_quotients: apc_corner: fused   STURBO: quot[ 7]= 976, quot_offset[ 7]=  70
+[    3.040840] cpr3_regulator_init_ctrl: apc: Default CPR mode = closed-loop
+[    3.053203] cpufreq: cpufreq_online: CPU0: Running at unlisted freq: 799999 KHz
+[    3.058950] cpufreq: cpufreq_online: CPU0: Unlisted initial frequency changed to: 864000 KHz
+[    3.066760] ubi0: attaching mtd17
+[    3.401397] ubi0: scanning is finished
+[    3.406812] ubi0: attached mtd17 (name "rootfs", size 86 MiB)
+[    3.406834] ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    3.411527] ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    3.418308] ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    3.425156] ubi0: good PEBs: 688, bad PEBs: 0, corrupted PEBs: 0
+[    3.431933] ubi0: user volume: 4, internal volumes: 1, max. volumes count: 128
+[    3.438185] ubi0: max/mean erase counter: 10/2, WL threshold: 4096, image sequence number: 1626161798
+[    3.445214] ubi0: available PEBs: 0, total reserved PEBs: 688, PEBs reserved for bad PEB handling: 80
+[    3.454514] ubi0: background thread "ubi_bgt0d" started, PID 142
+[    3.464974] hctosys: unable to open rtc device (rtc0)
+[    3.475125] ALSA device list:
+[    3.475149]   No soundcards found.
+[    3.479414] VFS: Mounted root (squashfs filesystem) readonly on device 31:25.
+[    3.482096] Freeing unused kernel memory: 1024K (80a00000 - 80b00000)
+[    3.790520] init: Console is alive
+[    3.790607] init: - watchdog -
+[    5.153118] SCSI subsystem initialized
+[    5.160612] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    5.160936] ehci-platform: EHCI generic platform driver
+[    5.169110] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    5.171425] ohci-platform: OHCI generic platform driver
+[    5.181629] msm-usb-ssphy-qmp 78000.ssphy: Initializing QMP phy
+[    5.190225] msm-usb-ssphy-qmp 78000.ssphy: QMP PHY initialization timeout
+[    5.190250] msm-usb-ssphy-qmp 78000.ssphy: USB3_PHY_PCS_STATUS:68686868
+[    5.400431] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    5.400471] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[    5.405703] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe65 hci version 0x110 quirks 0x00010010
+[    5.412429] xhci-hcd xhci-hcd.0.auto: irq 190, io mem 0x08a00000
+[    5.421373] hub 1-0:1.0: USB hub found
+[    5.427306] hub 1-0:1.0: 1 port detected
+[    5.431001] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    5.434929] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[    5.440276] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    5.448029] hub 2-0:1.0: USB hub found
+[    5.456119] hub 2-0:1.0: 1 port detected
+[    5.463851] usbcore: registered new interface driver usb-storage
+[    5.464722] input: soc:gpio_keys as /devices/platform/soc/soc:gpio_keys/input/input0
+[    5.793226] init: - preinit -
+[    5.928802] ! boot-calix preinit set printk level to '4 5'
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+Before mount_root
+[   10.081418] ubi0 error: ubi_open_volume: cannot open device 0, volume 3, error -16
+[   10.081459] ubi0 error: ubi_open_volume: cannot open device 0, volume 3, error -16
+After mount_root
+65536+0 records in
+65536+0 records out
+65536 bytes (64.0KB) copied, 0.142633 seconds, 448.7KB/s
+[   10.865373] ! boot-calix preinit exa_data: Attempting /exa_data mount 
+[   10.877655] ! boot-calix preinit exa_data: Mounting 'exa_data' MTD volume (mtd21) for GS2028E... 
+UBI device number 1, total 2416 LEBs (306774016 bytes, 292.5 MiB), available 0 LEBs (0 bytes), LEB size 126976 bytes (124.0 KiB)
+[   12.107363] ! boot-calix preinit exa_data: /dev/mtd21 attached as ubi1 
+Volume ID:   0 (on ubi1)
+Type:        dynamic
+Alignment:   1
+Size:        2332 LEBs (296108032 bytes, 282.3 MiB)[   13.132935] ! boot-calix preinit exa_data: Existing 'exa_data' volume OK 
+
+State:       OK
+Name:        exa_data_
+Character device major/minor: 239:1
+[   13.680921] ! boot-calix preinit exa_data: Mount /exa_data SUCCESS! (mtd21 / ubi1) 
+[   13.681593] ! boot-calix preinit dtshell ledinit
+Please press Enter to activate this console.
+[   16.273230] ubi: mtd17 is already attached to ubi0 WIFI FW mount is successful
+/usr/bin/iotd[1062]: Started iot daemon
+
+[   16.780949] Calix PAL bsp: the nvram partition is on nand(mtd)
+[   19.119872] nss_driver - fw of size 819604  bytes copied to load addr: 40000000, nss_id : 0
+[   19.120798] Supported Frequencies - 
+[   19.127060] 187.2 MHz 748.8 MHz 
+[   19.133002] 1.4976 GHz [   19.133956] 
+[   19.136331] 7f865ec0: set sdma bad02600
+[   19.137857] node size 2 # items 4
+[   19.141340] memory: 40000000 1073741824 (avl 959778816) items 4 active_cores 1
+[   19.144821] addr/size storage words 2 2 # words 4 in DTS, ddr size 1000000
+[   19.151948] 7f865ec0: NSS core 0 DDR from 40000000 to 41000000
+[   19.158880] 7f865ec0: meminfo init succeed
+[   19.192190] node size 2 # items 4
+[   19.192216] memory: 40000000 1073741824 (avl 959778816) items 4 active_cores 1
+[   19.194482] addr/size storage words 2 2 # words 4 in DTS, ddr size 1000000
+[   19.201621] 7f865ec0: nss core 0 booted successfully
+[   19.256664] diag: IPC Logging disabled
+[   19.257044] TRACK: P[0]	PMask[4]
+[   19.259309] TRACK: P[1]	PMask[4]
+[   19.262693] TRACK: P[2]	PMask[4]
+[   19.266223] TRACK: P[3]	PMask[4]
+[   19.394312] 710 (ebt_dhcprelay_init):dhcprelay registered.
+qcawifi configuration is disable
+ === relink bdwlan to WIFI_FW/bdwlan.b12, the country code is US ===
+***** starting cnssdaemon  -i integrated *****
+*****cnssdaemon pid=1530*********
+[   28.145299] cnss[2]: INFO: Setting daemon_support=1 for instance_id 0x2
+[   28.185714] cnss[2]: INFO: Setting cold_boot_support=1 for instance_id 0x2
+*********initiating cold boot calibration*************
+[   29.974848] cnss[2]: INFO: Waiting for FW ready. Device: 0xfffd, FW ready timeout: 15 seconds
+[   29.975780] cnss[2]: INFO: QMI WLFW service connected, state: 0x1
+[   29.976499] diag: In diag_send_feature_mask_update, control channel is not open, p: 2, 7fbaed84
+[   29.988653] cnss[2]: INFO: device_id : 65533 mem mode : [0]
+[   29.996956] cnss[2]: INFO: platform name: CALIX,GS2028E
+[   30.316867] cnss[2]: INFO: Target capability: chip_id: 0x0, chip_family: 0x4, board_id: 0xff, soc_id: 0xffffffff, fw_version: 0x2405ffff, fw_build_timestamp: 2021-10-11 19:44, otp_version: 0x0 eeprom_caldata_read_timeout 0s
+[   30.316933] cnss[2]: INFO: No board_id entry in device tree
+[   30.340728] cnss[2]: INFO: BDF location : 0x4abc0000
+[   30.341201] cnss[2]: INFO: BDF IPQ6018/bdwlan.bin size 65536
+[   30.346881] cnss[2]: INFO: per device BDF location : 0x4abe0000
+[   30.352078] cnss[2]: INFO: CALDATA IPQ6018/caldata.bin size 65536 offset 0x20000
+[   30.406015] cnss[2]: INFO: FW ready received for device 0xfffd
+[   30.407121] cnss[2]: INFO: Sending mode message, mode: COLDBOOT CALIBRATION(7), state: 0xf
+[   30.661145] cnss[2]: INFO: Coldboot Calbration wait started for Device: 0xfffd, timeout: 60 seconds
+[   31.067998] cnss[2]: INFO: Coldboot Calibration completed successfully for device 0xfffd
+[   31.096021] cnss[2]: INFO: Coldboot Calibration wait ended for device 0xfffd
+[   31.096060] cnss[2]: INFO: Sending mode message, mode: OFF(4), state: 0x7
+[   31.103697] cnss[2]: INFO: QMI WLFW service disconnected, state: 0x6
+[   32.875466] cnss[2]: INFO: Waiting for FW ready. Device: 0xfffd, FW ready timeout: 15 seconds
+[   32.876524] cnss[2]: INFO: QMI WLFW service connected, state: 0x1
+[   32.883354] cnss[2]: INFO: device_id : 65533 mem mode : [0]
+[   32.889220] cnss[2]: INFO: platform name: CALIX,GS2028E
+[   32.895222] cnss[2]: INFO: Target capability: chip_id: 0x0, chip_family: 0x4, board_id: 0xff, soc_id: 0xffffffff, fw_version: 0x2405ffff, fw_build_timestamp: 2021-10-11 19:44, otp_version: 0x0 eeprom_caldata_read_timeout 0s
+[   32.899858] cnss[2]: INFO: No board_id entry in device tree
+[   32.919579] cnss[2]: INFO: BDF location : 0x4abc0000
+[   32.924973] cnss[2]: INFO: BDF IPQ6018/bdwlan.bin size 65536
+[   32.930489] cnss[2]: INFO: per device BDF location : 0x4abe0000
+[   32.935843] cnss[2]: INFO: CALDATA IPQ6018/caldata.bin size 65536 offset 0x20000
+[   32.976022] cnss[2]: INFO: FW ready received for device 0xfffd
+[   32.976399] cnss[2]: INFO: Sending mode message, mode: MISSION(0), state: 0x7
+No Direct-Attach chipsets found.
+acfg_tool: Issuing blocking call to wait for events
+[   34.884179] ! boot-calix: - Mounting UBI volumes for GS2028E... -
+[   35.039617] ! boot-calix: - mounted /no_erase successfully! -
+[   35.849733]  p2-msg : 2022/02/22 03:34:26 : rc.common : ==== using existing config ====
+acfg_tool: Issuing blocking call to wait for events
+[   38.063273] ubi0 error: ubi_open_volume: cannot open device 0, volume 3, error -16
+[   38.063315] ubi0 error: ubi_open_volume: cannot open device 0, volume 3, error -16
+[   38.069908] ubi1 error: ubi_open_volume: cannot open device 1, volume 0, error -16
+[   38.077339] ubi1 error: ubi_open_volume: cannot open device 1, volume 0, error -16
+[   38.084873] ubi2 error: ubi_open_volume: cannot open device 2, volume 0, error -16
+[   38.092442] ubi2 error: ubi_open_volume: cannot open device 2, volume 0, error -16
+lbd: stopping daemon
+lbd: stopping daemon
+qcawifi qcawificfg80211 disable radio wifi0
+qcawifi qcawificfg80211 disable radio wifi1
+qcawifi qcawificfg80211: enable radio wifi0
+number of vifs: 1_1 1_9 1_11 
+Starting service 'dsmr'
+Starting service 'zmqevent'
+Starting service 'evtmgrd'
+HWMODE: 11AHE80
+qcawifi qcawificfg80211: enable radio wifi1
+number of vifs: 2_1 2_9 2_11 2_10 
+HWMODE: 11GHE20
+No IoT, skip
+Starting service 'lmd'
+=========== LMD started ===========
+Starting service 'alarmmgr'
+Starting service 'dcs'
+Starting service 'emesh'
+Starting service 'emeshcore'
+Starting service 'rgcommon'
+Starting service 'rgmonitor'
+Starting service 'rgns'
+Starting service 'saemgr'
+***** QDSS Tracing Configuration completed *******
+****** Starting QDSS for Integrated ********
+Starting service 'syscmd'
+Starting service 'sysmgr'
+configure ath19 xcess failure threshold to 0x1400
+Starting service 'urlfilterd'
+Starting service 'aemgr'
+Starting service 'testapp'
+Starting service 'tr69mgr'
+=========== emesh-oper-state-change: oper-state: normal ===========
+=========== vlan-shaping-status-changed: enabled 0 ===========
+=========== started-all-app(success,1,15) ===========
+Starting service 'healthmgr'
+=========== usb-device-state-change: name: stlink_zwave state: disconnected path:  ===========
+=========== usb-device-state-change: name: stlink_zigbee state: disconnected path:  ===========
+Starting service 'analytics'
+Starting service 'devicemgr'
+**** Platform Name: ap-cp01-c1 *****
+Copy ART caldata from /dev/mtdblock15 to /tmp/virtual_art.bin
+Starting service 'aecfg'
+Starting service 'conchecker'
+=========== device: mode unknown, role unknown ===========
+Starting service 'httpcgi'
+Starting service 'mapagent'
+Starting service 'mapapps'
+Starting service 'mapconfig'
+Starting service 'maplatencytest'
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=9] up ===========
+=========== LMD ready ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=11] up ===========
+=========== LMD ready in 6 seconds ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=11] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=11] up ===========
+Starting service 'maplldp'
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=11] up ===========
+Starting service 'mappm'
+Starting service 'mapspeedtest'
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=11] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=11] up ===========
+Starting service 'arcmgrd'
+=========== all-applications-active (1) ===========
+=========== device: mode rg, role unknown ===========
+=========== interface lan connected ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=11] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=11] up ===========
+=========== started-all-app(success,1,15) ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=11] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=11] up ===========
+no pvtlan
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=1]/iface[num=11] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=1] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=9] up ===========
+=========== interface /config/rg/wifi/device[radio=2]/iface[num=11] up ===========
+=========== interface lan connected ===========
