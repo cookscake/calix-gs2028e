@@ -1,0 +1,9 @@
+IPQ6018# nand info
+
+Device 0: nand0, sector size 128 KiB
+  Page size       2048 b
+  OOB size          64 b
+  Erase size    131072 b
+  subpagesize        0 b
+  options     0x       0
+  bbt options 0x       0

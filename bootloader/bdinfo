@@ -1,0 +1,16 @@
+IPQ6018# bdinfo
+arch_number = 0x08030000
+boot_params = 0x40000100
+DRAM bank   = 0x00000000
+-> start    = 0x40000000
+-> size     = 0x40000000
+eth0name    = eth0
+ethaddr     = b8:94:70:d8:4c:17
+current eth = eth0
+ip_addr     = 192.168.10.10
+baudrate    = 115200 bps
+TLB addr    = 0x4A4C0000
+relocaddr   = 0x4A400000
+reloc off   = 0x00000000
+irq_sp      = 0x4A27FA90
+sp start    = 0x4A27FA80

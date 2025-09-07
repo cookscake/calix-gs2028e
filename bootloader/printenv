@@ -1,0 +1,31 @@
+IPQ6018# printenv
+baudrate=115200
+bootargs=console=ttyMSM0,115200n8
+bootcmd=bootcalix || bootipq
+bootdelay=2
+eth1addr=b8:94:70:d8:4c:19
+eth2addr=b8:94:70:d8:4c:1a
+eth3addr=b8:94:70:d8:4c:1b
+eth4addr=b8:94:70:d8:4c:1c
+eth5addr=b8:94:70:d8:4c:1d
+eth6addr=62:38:3a:39:34:3a
+ethact=eth0
+ethaddr=b8:94:70:d8:4c:17
+fdt_high=0x48500000
+fdtcontroladdr=4a479f30
+flash_type=2
+ipaddr=192.168.10.10
+machid=8030000
+nand_erasesize=20000
+nand_oobsize=40
+nand_writesize=800
+netmask=255.255.255.0
+serverip=192.168.10.1
+soc_hw_version=20170100
+soc_version_major=1
+soc_version_minor=0
+stderr=serial@78B1000
+stdin=serial@78B1000
+stdout=serial@78B1000
+
+Environment size: 670/262140 bytes

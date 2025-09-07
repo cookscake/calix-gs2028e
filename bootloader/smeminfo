@@ -1,0 +1,45 @@
+IPQ6018# smeminfo
+ubi0: attaching mtd1
+ubi0: scanning is finished
+ubi0: attached mtd1 (name "mtd=0", size 86 MiB)
+ubi0: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+ubi0: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+ubi0: VID header offset: 2048 (aligned 2048), data offset: 4096
+ubi0: good PEBs: 688, bad PEBs: 0, corrupted PEBs: 0
+ubi0: user volume: 4, internal volumes: 1, max. volumes count: 128
+ubi0: max/mean erase counter: 4/1, WL threshold: 4096, image sequence number: 1626161798
+ubi0: available PEBs: 0, total reserved PEBs: 688, PEBs reserved for bad PEB handling: 80
+flash_type:		0x2
+flash_index:		0x0
+flash_chip_select:	0x0
+flash_block_size:	0x20000
+flash_density:		0x100000
+partition table offset	0x0
+No.: Name             Attributes            Start             Size
+  0: 0:SBL1           0x0000ffff              0x0         0x180000
+  1: 0:MIBIB          0x0000ffff         0x180000         0x100000
+  2: 0:BOOTCONFIG     0x0000ffff         0x280000          0x80000
+  3: 0:BOOTCONFIG1    0x0000ffff         0x300000          0x80000
+  4: 0:QSEE           0x0000ffff         0x700000         0x380000
+  5: 0:QSEE_1         0x0000ffff         0x380000         0x380000
+  6: 0:DEVCFG         0x0000ffff         0xb00000          0x80000
+  7: 0:DEVCFG_1       0x0000ffff         0xa80000          0x80000
+  8: 0:RPM            0x0000ffff         0xc00000          0x80000
+  9: 0:RPM_1          0x0000ffff         0xb80000          0x80000
+ 10: 0:CDT            0x0000ffff         0xd00000          0x80000
+ 11: 0:CDT_1          0x0000ffff         0xc80000          0x80000
+ 12: 0:APPSBLENV      0x0000ffff         0xd80000          0x80000
+ 13: 0:APPSBL         0x0000ffff         0xf80000         0x180000
+ 14: 0:APPSBL_1       0x0000ffff         0xe00000         0x180000
+ 15: 0:ART            0x0000ffff        0x1100000          0x80000
+ 16: rootfs           0x0000ffff        0x6780000        0x5600000
+	ubi vol 0 kernel
+	ubi vol 1 wifi_fw
+	ubi vol 2 ubi_rootfs
+	ubi vol 3 rootfs_data
+ 17: rootfs_1         0x0000ffff        0x1180000        0x5600000
+ 18: 0:ETHPHYFW       0x0000ffff        0xbd80000          0x80000
+ 19: 0:CSSS           0x0000ffff        0xbe00000         0x200000
+ 20: noerase          0x0000ffff        0xc000000        0x1100000
+ 21: exa_data         0x0000ffff        0xd100000       0x12e00000
+ 22: nvram            0x0000ffff       0x1ff00000         0x100000
